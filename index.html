@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Игра с игроками</title>
     <link rel="stylesheet" href="style.css">
     <!-- Подключаем библиотеку SortableJS для перетаскивания -->
@@ -20,11 +21,16 @@
     <div id="gameInterface" style="display: none;">
         <h1 id="player">Игрок: Игрок 1</h1>
         <h2 id="score">Очки: 0</h2>
-        <button onclick="addPoint()">+1 очко</button>
-        <button onclick="subtractPoint()">-1 очко</button>
-        <button onclick="nextPlayer()">Следующий игрок</button>
-        <button onclick="prevPlayer()">Предыдущий игрок</button>
-        <button onclick="startTimer()">Запустить таймер на 30 секунд</button>
+        <div class="controls">
+            <button onclick="addPoint()">+1 очко</button>
+            <button onclick="subtractPoint()">-1 очко</button>
+        </div>
+        <div class="controls">
+            <button onclick="prevPlayer()">Предыдущий игрок</button>
+            <button onclick="nextPlayer()">Следующий игрок</button>
+        </div>
+        <button class="timer-button" onclick="startTimer()">Запуск таймера на 30 секунд</button>
+        <button class="timer-button" onclick="restartTimer()">Рестарт таймера</button>
         <h3 id="timer">Осталось времени: 30 секунд</h3>
         
         <h3>Список игроков (перетащите для изменения порядка)</h3>
