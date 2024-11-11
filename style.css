@@ -2,22 +2,80 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+#setup, #gameInterface {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
     margin: 5px;
-    padding: 10px;
     font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.timer-button {
+    width: 100%;
+    margin: 10px 0;
 }
 
 #playerList {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 #playerList li {
-    padding: 8px;
-    margin: 4px;
-    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444;
+    color: #fff;
     cursor: move;
+    border-radius: 5px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .timer-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #playerList li {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
