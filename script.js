@@ -83,6 +83,14 @@ const startTimer = () => {
     timer = setInterval(updateTimer, 1000);
 };
 
+// Функция для рестарта таймера
+const restartTimer = () => {
+    if (timer) clearInterval(timer);
+    timeLeft = 30;
+    document.getElementById("timer").textContent = `Осталось времени: ${timeLeft} секунд`;
+    timer = setInterval(updateTimer, 1000);
+};
+
 // Обновление таймера
 const updateTimer = () => {
     if (timeLeft > 0) {
