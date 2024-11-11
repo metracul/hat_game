@@ -115,7 +115,10 @@ const renderPlayerList = () => {
         playerList.appendChild(li);
     });
 
+    // Настраиваем Sortable с поддержкой сенсорных событий
     Sortable.create(playerList, {
+        animation: 150,
+        touchStartThreshold: 4, // Порог для сенсорных экранов
         onEnd: evt => {
             const [removed] = players.splice(evt.oldIndex, 1);
             players.splice(evt.newIndex, 0, removed);
